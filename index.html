@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🏡 Smart Home Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🏡 Smart Home Dashboard</h1>
+    <div class="controls">
+      <button onclick="publish('home/livingroom/light','ON')">💡 Turn ON Light</button>
+      <button onclick="publish('home/livingroom/light','OFF')">💡 Turn OFF Light</button>
+    </div>
+    <div class="status">
+      <p>🔌 MQTT Status: <span id="status">Disconnected</span></p>
+      <p>📟 Sensor: <span id="sensor">--</span></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
